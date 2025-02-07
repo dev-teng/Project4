@@ -32,10 +32,6 @@ function Home() {
   return (
   <div className="container-fluid p-5 mt-5">
         <span className="bg-danger-subtle fs-1 fw-bold p-2 rounded">👤Employee Dashboard</span>
-          <h5 className="mt-5">{employee.firstname} {employee.lastname}</h5>
-          <h5>{employee.age}</h5>
-          <h5>{employee.address}</h5>
-          <h5>{employee.position}</h5>
         <div className="row">
             <div className="col-md-5 mt-5">
               <label htmlFor="firstname">Firstname</label>
@@ -103,6 +99,11 @@ function Home() {
         <div className="mt-3">
           <button onClick={() =>{ addEmployee()}} className="btn btn-dark ps-3 pe-4">+Add</button>
         </div>
+
+        <h5 className="mt-5">{employee.firstname} {employee.lastname}</h5>
+          <h5>{employee.age}</h5>
+          <h5>{employee.address}</h5>
+          <h5>{employee.position}</h5>
 
         <hr></hr>
         <span className="bg-danger-subtle p-1 mb-5 rounded">This is the list of employee</span>
