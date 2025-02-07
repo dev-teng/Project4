@@ -6,19 +6,27 @@ function Home() {
   const [employeeList, setEmployeeList] = useState([]);
 
   const addEmployee = () => {
-      setEmployeeList(
-        employeeList => [
-          ...employeeList, employee
-        ]
-      );
 
-    setEmployee({
-      firstname: '',
-      lastname: '',
-      age: '',
-      address: '',
-      position: '',
-    })
+    if(employee.firstname === '' || employee.lastname === '' || employee.age === ''
+       || employee.address === '' || employee.position === ''
+      ) {
+        alert('Missing fields ❌')
+      } else {
+            setEmployeeList(
+              employeeList => [
+                ...employeeList, employee
+              ]
+            );
+      
+          setEmployee({
+            firstname: '',
+            lastname: '',
+            age: '',
+            address: '',
+            position: '',
+          })
+      }
+      
   }
 
   return (
