@@ -11,8 +11,6 @@ function Home() {
           ...employeeList, employee
         ]
       );
- 
-    
 
     setEmployee({
       firstname: '',
@@ -37,6 +35,7 @@ function Home() {
                   ...employee, 
                   firstname: e.target.value
                 })}
+                value={employee.firstname}
                 className="form-control"
                 type="text" 
               />
@@ -48,6 +47,7 @@ function Home() {
                       ...employee, 
                       lastname: e.target.value
                     })}
+                    value={employee.lastname}
                     className="form-control" 
                     type="text" 
                   />
@@ -59,6 +59,7 @@ function Home() {
                       ...employee, 
                       age: e.target.value
                     })}
+                    value={employee.age}
                     className="form-control"
                     type="number" 
                   />
@@ -72,6 +73,7 @@ function Home() {
                       ...employee, 
                       address: e.target.value
                     })} 
+                  value={employee.address}
                   className="form-control" 
                   type="text" 
               />
@@ -83,6 +85,7 @@ function Home() {
                     ...employee, 
                     position: e.target.value
                   })}
+                value={employee.position}
                 className="form-control" 
                 type="text" 
               />
