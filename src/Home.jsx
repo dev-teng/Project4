@@ -28,6 +28,10 @@ function Home() {
       
   }
 
+  const updateEmployee = () => {
+    alert('click');
+  }
+
   // delete button
   const deleteEmployee = (id) => {
     setEmployeeList(employeeList.filter(emp => emp.id !== id));
@@ -110,7 +114,8 @@ function Home() {
             lastname={employeeRecord.lastname}
             age={employeeRecord.age}
             address={employeeRecord.address}
-            position={employeeRecord.position} 
+            position={employeeRecord.position}
+            updateEmployee={updateEmployee} 
             deleteEmployee={deleteEmployee} // for delete button
             />
           ))
