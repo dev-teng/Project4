@@ -12,6 +12,7 @@ function Home() {
   const [employeeList, setEmployeeList] = useState([]);
   const [editToggle, setEditToggle] = useState(false);
   const [editId, setEditId] = useState({});
+  const [selectedEmployee, setSelectedEmployee] = useState(null);
 
   useEffect(() => {
     fetch('/db.json')
@@ -89,6 +90,11 @@ function Home() {
   const deleteEmployee = (id) => {
     setEmployeeList(employeeList.filter(emp => emp.id !== id));
   }
+  const selectEmployee = (id) => {
+    const selected = employeeList.find(emp => emp.id === id); 
+    setSelectedEmployee(selected); 
+  };
+  
 
   return (
   <div className="container-fluid p-5 mt-5">
@@ -196,13 +202,26 @@ function Home() {
                 position={employeeRecord.position}
                 updateEmployee={updateEmployee} 
                 deleteEmployee={deleteEmployee} // for delete button
+                selectEmployee={selectEmployee.id}
                 />
               ))
             }
-       
-              
           </tbody>
         </table>
+
+        {selectedEmployee && (
+        <div className="mt-5">
+          <h3>Employee Details</h3>
+          <p><strong>Firstname:</strong> {selectedEmployee.firstname}</p>
+          <p><strong>Lastname:</strong> {selectedEmployee.lastname}</p>
+          <p><strong>Age:</strong> {selectedEmployee.age}</p>
+          <p><strong>Address:</strong> {selectedEmployee.address}</p>
+          <p><strong>Position:</strong> {selectedEmployee.position}</p>
+          <button onClick={() => setEditToggle(true)} className="btn btn-primary mt-3">
+            Edit
+          </button>
+        </div>
+          )}
 
         
         
