@@ -1,12 +1,23 @@
 import { useState, useEffect } from "react";
 import Employee from "./Employee";
-import db from "./db.json";
 function Home() {
 
   const [employee, setEmployee] = useState(0);
   const [employeeList, setEmployeeList] = useState([]);
   const [editToggle, setEditToggle] = useState(false);
   const [editProperties, setEditProperties] = useState({});
+
+  useEffect(() => {
+    fetch('/db.json')
+      .then((response) => response.json()) 
+      .then((data) => {
+       
+        setEmployeeList(data.employees);
+      })
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
   const addEmployee = () => {
 
@@ -15,11 +26,18 @@ function Home() {
       ) {
         alert('Missing fields ❌')
       } else {
-        setEmployeeList([
-          ...employeeList,
-          { ...employee, id: Date.now() },
-        ]);
-      
+        const nextId = employeeList.length > 0 ? Math.max(...employeeList.map(emp => emp.id)) + 1 : 1;
+
+        const newEmployee = {
+          id: nextId,
+          firstname: employee.firstname,
+          lastname: employee.lastname,
+          age: employee.age,
+          address: employee.address,
+          position: employee.position
+      };
+      setEmployeeList([...employeeList, newEmployee]);
+
           setEmployee({
             firstname: '',
             lastname: '',
@@ -123,8 +141,7 @@ function Home() {
 
         <hr></hr>
         <span className="bg-danger-subtle p-1 mb-5 rounded fw-bold">Employee List</span>
-        {
-          employeeList.map((employeeRecord) =>(
+        {employeeList.map((employeeRecord) =>(
             <Employee 
             key={employeeRecord.id} //for delete button
             id={employeeRecord.id} // for delete button

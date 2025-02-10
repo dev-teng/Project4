@@ -1,6 +1,6 @@
 function Employee({firstname, lastname, age, address, position, id, updateEmployee, deleteEmployee}) {
   return(
-    <div className="bg-secondary-subtle p-3 rounded mt-3">
+    <div >
      <table className="table table-bordered mt-3">
           <thead>
             <tr>
