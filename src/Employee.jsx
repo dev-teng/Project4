@@ -1,17 +1,19 @@
 function Employee({firstname, lastname, age, address, position, id, updateEmployee, deleteEmployee}) {
   return(
-    <div className="bg-secondary-subtle p-3 rounded mt-3 fw-bold">
+    <div className="bg-secondary-subtle p-3 rounded mt-3">
      <table className="table table-bordered mt-3">
           <thead>
             <tr>
               <th>ID</th>
-              <th>Name</th>
+              <th>Firstname</th>
+              <th>Lasstname</th>
               <th>Position</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-              <tr key={id}>
+              <tr>
+                <td>{id}</td>
                 <td>{firstname}</td>
                 <td>{lastname}</td>
                 <td>{position}</td>
