@@ -202,7 +202,7 @@ function Home() {
                 position={employeeRecord.position}
                 updateEmployee={updateEmployee} 
                 deleteEmployee={deleteEmployee} // for delete button
-                selectEmployee={selectEmployee.id}
+                selectEmployee={selectEmployee}
                 />
               ))
             }
