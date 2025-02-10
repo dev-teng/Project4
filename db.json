@@ -39,6 +39,125 @@
       "age": "29",
       "address": "Granja Lipa City",
       "position": "Web dev"
+    },
+    {
+      "id": 6,
+      "firstname": "Michelle",
+      "lastname": "Flores",
+      "age": "24",
+      "address": "Pag olingin west",
+      "position": "Job Order"
+    },
+    {
+      "id": 7,
+      "firstname": "Aira",
+      "lastname": "Madona",
+      "age": "22",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 8,
+      "firstname": "Margaux",
+      "lastname": "Medina",
+      "age": "23",
+      "address": "Malvar Batangas",
+      "position": "Job Order"
+    },
+    {
+      "id": 9,
+      "firstname": "James",
+      "lastname": "Villa",
+      "age": "40",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 10,
+      "firstname": "Allen",
+      "lastname": "Espino",
+      "age": "23",
+      "address": "Poblacion Malvar Batangas",
+      "position": "Job Order"
+    },
+    {
+      "id": 11,
+      "firstname": "Niño",
+      "lastname": "Mendoza",
+      "age": "26",
+      "address": "Batangas City",
+      "position": "Job Order"
+    },
+    {
+      "id": 12,
+      "firstname": "Ian",
+      "lastname": "Ocampo",
+      "age": "26",
+      "address": "San pioquinto malvar",
+      "position": "Job Order"
+    },{
+      "id": 13,
+      "firstname": "Marlon",
+      "lastname": "Ang",
+      "age": "31",
+      "address": "Guadalupe Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 14,
+      "firstname": "Clebyn",
+      "lastname": "Arellano",
+      "age": "28",
+      "address": "Malvar Batangas",
+      "position": "Job Order"
+    },
+    {
+      "id": 15,
+      "firstname": "Shaira",
+      "lastname": "Caguitla",
+      "age": "22",
+      "address": "Inosluban Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 16,
+      "firstname": "Arron",
+      "lastname": "Villegas",
+      "age": "27",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 17,
+      "firstname": "Christian",
+      "lastname": "Aquino",
+      "age": "24",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 18,
+      "firstname": "Aldwin",
+      "lastname": "Rosales",
+      "age": "36",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 19,
+      "firstname": "Nalia",
+      "lastname": "Ochavillo",
+      "age": "30",
+      "address": "Tanauan City",
+      "position": "Job Order"
+    },
+    {
+      "id": 20,
+      "firstname": "Mark",
+      "lastname": "Matias",
+      "age": "25",
+      "address": "San Carlos Lipa City",
+      "position": "Job Order"
     }
     
   ]

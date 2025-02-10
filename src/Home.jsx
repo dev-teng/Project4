@@ -82,7 +82,7 @@ function Home() {
     if (employeeToEdit) {
       setEmployee(employeeToEdit); 
       setEditToggle(true); 
-      setEditId(id); // 
+      setEditId(id); 
     }
   };
 
