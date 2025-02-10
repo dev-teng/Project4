@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Employee from "./Employee";
+import db from "./db.json";
 function Home() {
 
   const [employee, setEmployee] = useState(0);

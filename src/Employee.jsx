@@ -6,7 +6,7 @@ function Employee({firstname, lastname, age, address, position, id, updateEmploy
             <tr>
               <th>ID</th>
               <th>Firstname</th>
-              <th>Lasstname</th>
+              <th>Lastname</th>
               <th>Position</th>
               <th>Actions</th>
             </tr>
