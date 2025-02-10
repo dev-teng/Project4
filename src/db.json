@@ -1,0 +1,45 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "firstname": "Vincent",
+      "lastname": "Lacerna",
+      "age": "26",
+      "address": "Balintawak Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 2,
+      "firstname": "Arnold",
+      "lastname": "Vergara",
+      "age": "32",
+      "address": "Sabang Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 3,
+      "firstname": "Ronald",
+      "lastname": "Mendoza",
+      "age": "24",
+      "address": "Marauoy Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 4,
+      "firstname": "Arnal",
+      "lastname": "Tupado",
+      "age": "33",
+      "address": "Bulacnin Lipa City",
+      "position": "Job Order"
+    },
+    {
+      "id": 5,
+      "firstname": "Arlon",
+      "lastname": "Aguilera",
+      "age": "29",
+      "address": "Granja Lipa City",
+      "position": "Web dev"
+    }
+    
+  ]
+}

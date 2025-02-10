@@ -4,6 +4,8 @@ function Home() {
 
   const [employee, setEmployee] = useState(0);
   const [employeeList, setEmployeeList] = useState([]);
+  const [editToggle, setEditToggle] = useState(false);
+  const [editProperties, setEditProperties] = useState({});
 
   const addEmployee = () => {
 
@@ -28,8 +30,9 @@ function Home() {
       
   }
 
-  const updateEmployee = () => {
-    alert('click');
+  const updateEmployee = (id) => {
+    setEditToggle(true)
+    
   }
 
   // delete button
@@ -94,9 +97,23 @@ function Home() {
             </div>
         </div>
 
-        <div className="mt-3">
-          <button onClick={() =>{ addEmployee()}} className="btn btn-dark ps-3 pe-4">+Add</button>
-        </div>
+        {
+          editToggle
+          ?
+          (
+            <div className="mt-3">
+            <button onClick={() =>{ addEmployee()}} className="btn btn-success ps-3 pe-4">update</button>
+          </div>
+          )
+          :
+          (
+            <div className="mt-3">
+              <button onClick={() =>{ addEmployee()}} className="btn btn-dark ps-3 pe-4">+Add</button>
+            </div>
+          )
+        }
+
+        
 
         <h5 className="mt-5">{employee.firstname} {employee.lastname}</h5>
           <h5>{employee.age}</h5>
