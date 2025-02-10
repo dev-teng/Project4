@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 import Employee from "./Employee";
 function Home() {
 
-  const [employee, setEmployee] = useState(0);
+  const [employee, setEmployee] = useState({
+    firstname: '',
+    lastname: '',
+    age: '',
+    address: '',
+    position: '',
+  });
   const [employeeList, setEmployeeList] = useState([]);
   const [editToggle, setEditToggle] = useState(false);
-  const [editProperties, setEditProperties] = useState({});
+  const [editId, setEditId] = useState({});
 
   useEffect(() => {
     fetch('/db.json')
@@ -45,14 +51,39 @@ function Home() {
             address: '',
             position: '',
           })
-      }
+      }   
       
   }
 
+  const updateEmployeeInList = () => {
+    if (editId !== null) {
+      setEmployeeList(prevList =>
+        prevList.map(emp =>
+          emp.id === editId ? { ...emp, ...employee } : emp
+        )
+      );
+
+  
+      setEmployee({
+        firstname: '',
+        lastname: '',
+        age: '',
+        address: '',
+        position: '',
+      });
+      setEditToggle(false); 
+      setEditId(null);
+    }
+  };
+
   const updateEmployee = (id) => {
-    setEditToggle(true)
-    
-  }
+    const employeeToEdit = employeeList.find((emp) => emp.id === id);
+    if (employeeToEdit) {
+      setEmployee(employeeToEdit); 
+      setEditToggle(true); 
+      setEditId(id); // 
+    }
+  };
 
   // delete button
   const deleteEmployee = (id) => {
@@ -121,7 +152,7 @@ function Home() {
           ?
           (
             <div className="mt-3">
-            <button onClick={() =>{ addEmployee()}} className="btn btn-success ps-3 pe-4">update</button>
+            <button onClick={() =>{ updateEmployeeInList()}} className="btn btn-success ps-3 pe-4">update</button>
           </div>
           )
           :
