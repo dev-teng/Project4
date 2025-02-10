@@ -121,7 +121,7 @@ function Home() {
           <h5>{employee.position}</h5>
 
         <hr></hr>
-        <span className="bg-danger-subtle p-1 mb-5 rounded">This is the list of employee</span>
+        <span className="bg-danger-subtle p-1 mb-5 rounded fw-bold">Employee List</span>
         {
           employeeList.map((employeeRecord) =>(
             <Employee 
