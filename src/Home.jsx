@@ -172,20 +172,39 @@ function Home() {
 
         <hr></hr>
         <span className="bg-danger-subtle p-1 mb-5 rounded fw-bold">Employee List</span>
-        {employeeList.map((employeeRecord) =>(
-            <Employee 
-            key={employeeRecord.id} //for delete button
-            id={employeeRecord.id} // for delete button
-            firstname={employeeRecord.firstname}
-            lastname={employeeRecord.lastname}
-            age={employeeRecord.age}
-            address={employeeRecord.address}
-            position={employeeRecord.position}
-            updateEmployee={updateEmployee} 
-            deleteEmployee={deleteEmployee} // for delete button
-            />
-          ))
-        }
+
+        <table className="table table-bordered mt-3">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Position</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+       
+            {employeeList.map((employeeRecord) =>(
+                <Employee 
+                key={employeeRecord.id} //for delete button
+                id={employeeRecord.id} // for delete button
+                firstname={employeeRecord.firstname}
+                lastname={employeeRecord.lastname}
+                age={employeeRecord.age}
+                address={employeeRecord.address}
+                position={employeeRecord.position}
+                updateEmployee={updateEmployee} 
+                deleteEmployee={deleteEmployee} // for delete button
+                />
+              ))
+            }
+       
+              
+          </tbody>
+        </table>
+
+        
         
   </div>
    
